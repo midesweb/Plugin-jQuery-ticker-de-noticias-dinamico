@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>Probando plugin novedades dinámicas</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.timer.js" type="text/javascript"></script>
+	<script src="jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="jquery.dwdinanews.0.1.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+	body {
+		font-family: tahoma, verdana, arial, sans-serif;
+		font-size: 12px;
+	}
+	#novedades{
+		border: 1px solid #ccc;
+		width: 234px;
+		height: 60px;
+		overflow: hidden;
+	}
+	#novedades ul{
+		margin: 0;
+		padding: 0;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	#novedades li{
+		margin: 0;
+		padding: 5px;
+		height: 50px;
+		overflow: hidden;
+		line-height: 16px;
+	}
+	#novedades li a{
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	
+	
+	#otrasnovedades{
+		border: 1px solid #ccc;
+		width: 600px;
+		height: 120px;
+		overflow: hidden;
+		font-size: 1.4em;
+	}
+	#otrasnovedades ul{
+		margin: 0;
+		padding: 0;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	#otrasnovedades li{
+		margin: 0;
+		padding: 10px;
+		height: 90px;
+		overflow: hidden;
+		line-height: 24px;
+	}
+	#otrasnovedades li a{
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+	</style>
+
+<script language="javascript">
+
+
+
+$(document).ready(function(){
+	$("#novedades").dwdinanews();
+	$("#otrasnovedades").dwdinanews({
+		retardo: 5000,
+		tiempoAnimacion: 1000,
+		funcionAnimacion: 'easeInOutElastic'
+	});
+})
+</script>
+
+</head>
+<body>
+    
+	
+	<div id="novedades">
+		<ul>
+			<li>
+				<a href="#">Novedad primera</a>:
+				<br>
+				Lorem ipsum est quo sit amentus apis larumser.
+			</li>
+			<li>
+				<a href="#">Probando la margarita</a>:
+				<br>
+				At vero eos et accusamus et iusto odio dignissimos.
+			</li>
+			<li>
+				<a href="#">Aquí pasa un tucán</a>:
+				<br>
+				Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.
+			</li>
+			<li>
+				<a href="#">Si sale el sol</a>:
+				<br>
+				Sua omnis voluptas assumenda est, omnis dolor repellendus.
+			</li>
+			<li>
+				<a href="#">Son dos en uno</a>:
+				<br>
+				Similique sunt in culpa qui officia deserunt mollitia animi, id est.
+			</li>
+			<li>
+				<a href="#">Acabo por aquí</a>:
+				<br>
+				Itaque earum rerum hic tenetur a sapiente.
+			</li>
+		</ul>
+	</div>
+	
+	<p>
+		Ese ticker va bien... ahora voy a probar con otro al que le voy a colocar otros estilos y textos mayores.
+	</p>
+	<p>
+		Recuerda que todo <a href="http://www.desarrolloweb.com/manuales/manual-jquery.html">jQuery lo puedes aprender en DesarrolloWeb.com</a>.
+	</p>
+	
+	
+	<div id="otrasnovedades">
+		<ul>
+			<li>
+				<a href="#">Si lo quieres lo consigues</a>:
+				<br>
+				Dicen que querer es poder y es una de las verdades más grandes que nadie ha dicho nunca. Quien busca encuentra y otros mil dichos populares confirman la teoría.
+			</li>
+			<li>
+				<a href="#">Vestibulum ante ipsum primis</a>:
+				<br>
+				Sed porta erat non diam fringilla ac iaculis nunc sodales. Nullam elementum, sapien a venenatis tincidunt, sapien ligula tincidunt nibh.
+			</li>
+			<li>
+				<a href="#">En nec euismod mauris</a>:
+				<br>
+				Suspendisse et nulla metus. Ut sed eros a sapien euismod venenatis. Phasellus nec nisi tellus. Suspendisse potenti.
+			</li>
+		</ul>
+	</div>
+	
+	
+</body>
+</html>
